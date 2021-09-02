@@ -19,7 +19,9 @@ const imports = {
 jyho({
   args: process.argv.slice(2),
   imports,
-  debug: !!process.env.DEBUG
-}).then(console.log).catch(err => {
-  console.error(err.message);
-});
+  debug: !!process.env.DEBUG,
+})
+  .then(console.log)
+  .catch(err => {
+    console.error(err.message);
+  });

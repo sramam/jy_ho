@@ -13,27 +13,21 @@ const imports = {
   fs,
   YAML,
   dotProp,
-  exit: process.exit
+  exit: process.exit,
 };
 
 describe('jyho', () => {
   it('json', async () => {
     const result = await jyho({
-      args: [
-        `${__dirname}/fixtures/sample.json`,
-        "some.nested.json"
-      ],
-      imports
+      args: [`${__dirname}/fixtures/sample.json`, 'some.nested.json'],
+      imports,
     });
     expect(result).toEqual(true);
   });
   it('yaml', async () => {
     const result = await jyho({
-      args: [
-        `${__dirname}/fixtures/sample.yaml`,
-        "some.nested.yaml"
-      ],
-      imports
+      args: [`${__dirname}/fixtures/sample.yaml`, 'some.nested.yaml'],
+      imports,
     });
     expect(result).toEqual(true);
   });
