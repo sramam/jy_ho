@@ -1,0 +1,7 @@
+{ 
+    "some": {
+        "nested": {
+            "json": true
+        }
+    }
+}
